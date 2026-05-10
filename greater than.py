@@ -1,12 +1,8 @@
-import random
+number1 = 8
 
-def greaterThan(x, y):
-    if x > y:
-        return True
-    return False
-while True:
-    a = random.randint(-100, 100)
-    b = random.randint(-150, 150)
-    c = greaterThan(a, b)
+number2 = 5
 
-    print(f"The statement {a} is greater than {b} is {c}")
+number3 = 2
+
+result = number1 + number2 * number3 - number1 / number3
+print(result)
