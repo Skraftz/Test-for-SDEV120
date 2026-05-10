@@ -223,7 +223,7 @@ def fill_with_fake_values():
     print("ID's 1 through 4 have been overwrited.")
     print()
 
-    id = 1
+    id = '1'
     employees[id] = {
         "name":{
             "first": "Water",
@@ -235,7 +235,7 @@ def fill_with_fake_values():
         "id":id
     }
     
-    id = 2
+    id = '2'
     employees[id] = {
         "name":{
             "first": "Lava",
@@ -247,7 +247,7 @@ def fill_with_fake_values():
         "id":id
     }
     
-    id = 3
+    id = '3'
     employees[id] = {
         "name":{
             "first": "Lazy",
@@ -259,7 +259,7 @@ def fill_with_fake_values():
         "id":id
     }
     
-    id = 4
+    id = "4"
     employees[id] = {
         "name":{
             "first": "Triangle",
