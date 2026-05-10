@@ -77,7 +77,7 @@ def edit_employee(i:int = 0, id = None):
     if id == None:
         id = input("Which Employee would you edit: ")
 
-    if not id in employees:
+    if not str(id) in employees:
         print("Error: No ID found.")
         if i < 3:
             print()
@@ -212,7 +212,7 @@ def spreadthemsheets():
         for stat in value:
             if stat != "name":
                 place = spreadsheet_order.index(stat)
-                sheet.write(i, place, str(stat))
+                sheet.write(i, place, str(value[stat]))
     wb.save("Employees sheet.xls")
 
 
@@ -297,7 +297,11 @@ def action():
                 Calculate_pay(x)
         case 3:
             if spreadsheet:
-                spreadthemsheets()
+                try:
+                    spreadthemsheets()
+                except:
+                    print("Error: Sheet probably open.")
+                    print()
         case 4:
             edit_employee()
         case 5: 
